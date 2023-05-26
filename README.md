@@ -1,38 +1,24 @@
-# create-svelte
+# Budget Guardian
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Budget Guardian est une application de gestion financière qui vous aide à suivre vos dépenses, gérer votre budget et atteindre vos objectifs financiers. Cette application conviviale vous permet d'enregistrer vos dépenses, de créer des budgets personnalisés, d'analyser vos habitudes de dépenses et de visualiser vos données financières de manière claire.
 
-## Creating a project
+## Fonctionnalités
 
-If you're seeing this, you've probably already done this step. Congrats!
+- Suivi des dépenses : Enregistrez facilement vos dépenses avec des détails tels que la date, la description, le montant et la catégorie.
+- Gestion des budgets : Créez des budgets personnalisés pour différentes catégories de dépenses et suivez votre progression.
+- Tableau de bord interactif : Visualisez vos dépenses, vos revenus et la répartition du budget avec des graphiques et des statistiques.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Technologies utilisées
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+- Symfony : Framework PHP utilisé pour le développement de l'API REST.
+- SvelteKit : Framework JavaScript pour la création de l'interface utilisateur réactive.
+- PostgreSQL : Base de données relationnelle pour stocker les données des utilisateurs et des dépenses.
+- HTML/CSS : Langages de balisage et de style pour la création de l'interface utilisateur.
 
-## Developing
+## Configuration du projet
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+1. Clonez ce dépôt sur votre machine locale.
+2. Assurez-vous d'avoir les prérequis nécessaires (PHP, PostgreSQL, etc.) installés sur votre système.
+3. Configurez les variables d'environnement nécessaires pour l'application, telles que les informations de connexion à la base de données.
+4. Exécutez les migrations pour créer la structure de la base de données.
+5. Lancez l'application en exécutant les commandes nécessaires pour démarrer le serveur Symfony et le serveur de développement Svelte.
