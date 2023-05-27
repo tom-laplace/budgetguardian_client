@@ -26,9 +26,7 @@
     } else if (password !== confirmPassword) {
       errors.matchingPasswords = "Les mots de passe ne correspondent pas.";
     } else if (
-      password.match(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{10,}$/
-      ) === null
+      !password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{10,}$/)
     ) {
       errors.invalidPassword =
         "Le mot de passe doit contenir au moins 1 lettre, minuscule et majuscule, 1 chiffre, 1 caractère spécial et au moins 10 caractères.";
@@ -53,7 +51,7 @@
     if (!validate()) {
       return;
     }
-    const response = await fetch("https://your-external-api.com/register", {
+    const response = await fetch("https://localhost:8000/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
